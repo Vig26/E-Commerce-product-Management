@@ -34,8 +34,8 @@ public class ProductController {
     }
 
     @PostMapping("/disortax/{productId}")
-    public ResponseDTO discountProduct(@PathVariable Long productId){
-        return productService.discountProduct(productId);
+    public ResponseDTO discountProduct(@PathVariable Long productId, @RequestBody Object discount){
+        return productService.discountProduct(productId, discount);
     }
 
 }
